@@ -219,7 +219,7 @@ header .fa-book {
 
 /*---------------------------- Home section starts -------------------*/
 .home {
-  background-image: url(/assets/images/banner-bg.jpg);
+  background-image: url(assets/images/banner-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
