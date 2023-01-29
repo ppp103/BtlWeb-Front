@@ -24,7 +24,7 @@ html {
   overflow-x: hidden;
   scroll-padding-top: 5rem;
   scroll-behavior: smooth;
-  transition: all ease .3s;
+  transition: all ease 0.3s;
 }
 
 html::-webkit-scrollbar {
@@ -40,7 +40,7 @@ html::-webkit-scrollbar-thumb {
   background: var(--black);
 }
 
-button{
+button {
   outline: none;
   border: none;
 }
@@ -65,7 +65,7 @@ a:hover {
   text-decoration: none;
 }
 
-.shop-btn {
+.button {
   display: inline-block;
   background-color: var(--green);
   padding: 1rem 2rem;
@@ -76,7 +76,7 @@ a:hover {
   transition: 0.3s ease;
 }
 
-.shop-btn:hover {
+.button:hover {
   color: #fff;
   /* background-color: var(--dark-green); */
   cursor: pointer;
@@ -99,17 +99,16 @@ a:hover {
   }
 }
 
-.section-container{
+.section-container {
   width: 90%;
   margin: 10rem auto 0rem;
   padding-bottom: 7rem;
 }
 
-.section-heading{
+.section-heading {
   font-weight: bold;
   font-size: 5rem;
 }
-
 
 /*---------------------------- Header section starts -------------------*/
 
@@ -219,7 +218,7 @@ header .fa-book {
 
 /*---------------------------- Home section starts -------------------*/
 .home {
-  background-image: url(assets/images/banner-bg.jpg);
+  background-image: url(/assets/images/banner-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -288,17 +287,83 @@ header .fa-book {
   margin-left: 2rem;
   border-left: 0.1rem solid rgba(0, 0, 0, 0.6);
 }
-/* 
-.about h1 {
-  font-size: 5rem;
-  font-weight: bold;
-} */
 
-.about .shop-btn {
+.about .button {
   margin-top: 2rem;
 }
 
 /*---------------------------- About section ends -------------------*/
+
+/*---------------------------- Product section starts -------------------*/
+.product {
+  height: auto;
+}
+
+.product .swiper-wrapper {
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+.product .swiper-slide {
+  border: var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: linear-gradient(15deg, #eee 60%, #fff 60%);
+}
+
+.product .swiper-slide:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: .3s;
+}
+
+.product .section-img {
+  display: flex;
+  justify-content: center;
+  transform: translateY(7rem);
+  transition: .3s;
+}
+
+.product .swiper-slide:hover .section-img {
+  transform: translateY(2rem);
+}
+
+.product img {
+  width: 25rem;
+}
+
+.product .product-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.product-content span{
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  height:4rem !important;
+  width:4rem !important;
+  border-radius: 100% !important;
+  color: var(--black) !important;
+  background: #fff !important;
+  transition: .3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 2rem !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    background: var(--black) !important;
+    color:#fff !important;
+}
+
+/*---------------------------- Product section ends -------------------*/
 
 /*---------------------------- Customer section starts -------------------*/
 .customer {
@@ -309,6 +374,7 @@ header .fa-book {
     var(--dark-green) 100%
   );
   margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .customer .row {
@@ -386,32 +452,33 @@ header .fa-book {
 /*---------------------------- Customer section ends -------------------*/
 
 /*---------------------------- Blog section starts -------------------*/
-.blog .section-heading {
+.blog .section-heading,
+.product .section-heading {
   text-align: center;
   padding-bottom: 5rem;
 }
 
-.blog .blog-content{
+.blog .blog-content {
   margin: auto 0;
   padding-top: 3rem;
 }
 
-.blog .blog-section-2{
+.blog .blog-section-2 {
   margin-top: 2rem;
 }
 /*---------------------------- Blog section ends -------------------*/
 
 /*---------------------------- Contact section starts -------------------*/
-.contact.section-container{
+.contact.section-container {
   width: 70%;
 }
 
-.contact .section-heading{
+.contact .section-heading {
   text-align: center;
   padding-bottom: 5rem;
 }
 
-.form-group{
+.form-group {
   position: relative;
   font-size: 1.6rem;
 }
@@ -420,7 +487,7 @@ header .fa-book {
   margin-top: 4rem;
   border: 0;
   padding: 0rem 0;
-  border-bottom: .1rem solid lightgrey;
+  border-bottom: 0.1rem solid lightgrey;
   background-color: transparent;
   width: 100%;
 }
@@ -434,7 +501,7 @@ input ~ span {
   bottom: 0;
   left: 0;
   width: 0;
-  height: .1rem;
+  height: 0.1rem;
   background-color: #ff3e00;
   transition: 0.4s;
 }
@@ -465,12 +532,11 @@ input:not(:focus) ~ p {
   color: #aaa;
 }
 
-.contact .shop-btn{
+.contact .button {
   margin-top: 2rem;
 }
 
 /*---------------------------- Contact section ends -------------------*/
-
 
 /*------------------------ Header bottom section starts --------------*/
 .bottom-navbar {
@@ -498,16 +564,20 @@ input:not(:focus) ~ p {
 /*------------------------ Header bottom section ends -------------------*/
 
 /*---------------------------- Footer section starts -------------------*/
-footer h1{
+footer .section-container {
+  padding: 0;
+}
+
+footer h1 {
   font-size: 2.4rem;
 }
 
-footer p{
+footer p {
   padding-bottom: 2rem;
   font-size: 1.6rem;
 }
 
-footer .footer-icons{
+footer .footer-icons {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -516,7 +586,7 @@ footer .footer-icons{
   border-top: var(--border);
 }
 
-.footer-icon{
+.footer-icon {
   display: inline-block;
   margin-right: 2rem;
   border-radius: 100%;
@@ -524,25 +594,24 @@ footer .footer-icons{
   background-color: var(--green);
   color: #fff;
   font-size: 2rem;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.fa-facebook-f{
+.fa-facebook-f {
   padding: 1.2rem 1.5rem;
 }
 
-.footer-icon:hover{
+.footer-icon:hover {
   background-color: var(--dark-green);
 }
 
-footer .footer-note{
+footer .footer-note {
   text-align: center;
   padding-top: 3rem;
   font-size: 2rem;
 }
 
 /*---------------------------- Footer section ends -------------------*/
-
 
 /*------------------------ Responsive -----------------------------------*/
 @media (max-width: 991px) {
@@ -636,13 +705,21 @@ footer .footer-note{
     width: 40% !important;
   }
 
-  .blog .blog-content{
+  .blog .blog-content {
     padding-top: 0;
   }
 
   .bottom-navbar {
     display: flex;
   }
+  
+  .product .section-img{
+    transform: translateY(3rem);
+  }
+
+  .product .swiper-slide:hover .section-img{
+    transform: translateY(3rem);
+  } 
 }
 
 @media (max-width: 500px) {
@@ -650,7 +727,7 @@ footer .footer-note{
     font-size: 50%;
   }
 
-  .section-container{
+  .section-container {
     padding-bottom: 0;
   }
 
@@ -658,9 +735,9 @@ footer .footer-note{
     height: 100%;
   }
 
-  .home .row ,  
+  .home .row,
   .contact .row,
-  .blog .row{
+  .blog .row {
     flex-direction: column;
     height: 86%;
     margin-top: 0;
@@ -695,7 +772,7 @@ footer .footer-note{
   }
 
   .about .row,
-  footer .row{
+  footer .row {
     flex-direction: column;
   }
 
@@ -703,7 +780,7 @@ footer .footer-note{
     padding: 0;
   }
 
-  .swiper-pagination{
+  .swiper-pagination {
     margin-left: 5rem;
   }
 
@@ -712,15 +789,15 @@ footer .footer-note{
   }
 
   .contact .section-img img,
-  .blog .section-img img{
+  .blog .section-img img {
     width: 100%;
   }
 
-  .blog .blog-section-2 .row{
+  .blog .blog-section-2 .row {
     flex-direction: column-reverse;
   }
 
-  footer{
+  footer {
     padding-bottom: 10rem;
   }
 }

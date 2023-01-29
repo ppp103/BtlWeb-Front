@@ -19,26 +19,47 @@ searchBtn.addEventListener("click", function (e) {
 var swiper = new Swiper(".book-slider", {
   loop: true,
   spaceBetween: 0,
-    breakpoints:{
-        0: {
-            slidesPerView:1,
-        },
-        768: {
-            slidesPerView:2,
-        },
-        1024: {
-            slidesPerView:3,
-        },
-    }
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 var swiper = new Swiper(".customer-slider", {
   loop: true,
-  centerSlide: 'true',
-  grabCursor: 'true',
+  centerSlide: "true",
+  grabCursor: "true",
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: true,
+  },
+});
+
+var swiper = new Swiper(".product-slider", {
+  loop: true,
+  spaceBetween: 30,
+  grabCursor: "true",
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
