@@ -102,6 +102,7 @@ a:hover {
 .section-container {
   width: 90%;
   margin: 10rem auto 0rem;
+  padding-top: 5rem;
   padding-bottom: 7rem;
 }
 
@@ -110,6 +111,22 @@ a:hover {
   font-size: 5rem;
 }
 
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.section{
+  transition: 1.5s;
+}
+
+.section.section-hidden{
+  opacity: 0;
+  transform: translateX(-20rem);
+}
 /*---------------------------- Header section starts -------------------*/
 
 /*------------ Header-1 section starts --------------*/
@@ -218,7 +235,7 @@ header .fa-book {
 
 /*---------------------------- Home section starts -------------------*/
 .home {
-  background-image: url(assets/images/banner-bg.jpg);
+  background-image: url(/assets/images/banner-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -334,6 +351,10 @@ header .fa-book {
 .product .product-content {
   text-align: center;
   padding: 2rem;
+}
+
+.product-content h2{
+  padding: 1.5rem;
 }
 
 .product-content span{

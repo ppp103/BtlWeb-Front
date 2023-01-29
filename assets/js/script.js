@@ -1,6 +1,12 @@
 const searchBar = document.querySelector(".search");
 const searchBtn = document.querySelector("#search-btn");
 const searchBox = document.querySelector(".search");
+const header = document.querySelector('.header-2');
+const header1 = document.querySelector('.header-1')
+const body = document.querySelector('body');
+const sections = document.querySelectorAll('.section');
+
+const headerHeight = header1.offsetHeight
 // Click vào thanh tìm kiếm -> border đen
 window.addEventListener("click", function (e) {
   if (e.target.classList.contains("search-box")) {
@@ -14,6 +20,16 @@ window.addEventListener("click", function (e) {
 searchBtn.addEventListener("click", function (e) {
   searchBar.classList.toggle("clicked");
 });
+
+window.addEventListener('scroll', function(e){
+  if(this.scrollY > headerHeight){
+    header.classList.add('sticky');
+    body.style.paddingTop = `50px`;
+  }else{
+    header.classList.remove('sticky')
+    body.style.paddingTop = '0px';
+  }
+})
 
 //slide
 var swiper = new Swiper(".book-slider", {
@@ -63,3 +79,30 @@ var swiper = new Swiper(".product-slider", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//load on scroll
+console.log(sections);
+const revealSection = function (entries, observer) {
+  console.log(entries);
+  const [entry] = entries;
+  console.log(entry);
+
+  console.log(entry.isIntersecting);
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section-hidden');
+
+  observer.unobserve(entry.target);
+}
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.3,
+});
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
+  section.classList.add('section-hidden');
+  // console.log(section);
+});
+

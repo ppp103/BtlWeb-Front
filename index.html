@@ -36,6 +36,14 @@
       src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
     ></script>
 
+    <!-- Link jquery -->
+    <script defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
     <!-- Link js <Để dưới các file js khác> -->
     <script defer src="assets/js/script.js"></script>
   </head>
@@ -64,11 +72,12 @@
       <div class="header-2">
         <nav>
           <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Sách</a></li>
-            <li><a href="#">Nhận xét</a></li>
-            <li><a href="#">Liên lạc</a></li>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#product">Sách</a></li>
+            <li><a href="#customer">Nhận xét</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Liên lạc</a></li>
           </ul>
         </nav>
       </div>
@@ -78,7 +87,7 @@
     <!-- Main content starts -->
     <main>
       <!-- Home section starts -->
-      <section class="home">
+      <section id="home" class="home">
         <div class="row">
           <div class="content col col-lg-6 col-md-12 col-sm-12">
             <h1>Giảm giá 75%</h1>
@@ -138,7 +147,7 @@
       <!-- Home section ends -->
 
       <!-- About section starts -->
-      <section class="about section-container">
+      <section id="about" class="about section section-container">
         <div class="row">
           <div class="about-content col col-lg-6 col-md-12 col-sm-12">
             <h1 class="section-heading">Giới thiệu</h1>
@@ -165,7 +174,7 @@
       <!-- About section ends -->
 
       <!-- Product section starts -->
-      <section class="product section-container">
+      <section id="product" class="product section section-container">
         <h1 class="section-heading">Sách</h1>
         <div class="swiper product-slider">
           <div class="swiper-wrapper">
@@ -312,7 +321,7 @@
       <!-- Product section ends -->
 
       <!-- Customer section starts -->
-      <section class="customer">
+      <section id="customer" class="customer section">
         <div class="row">
           <div class="col col-lg-3 col-md-3 col-sm-12">
             <div class="customer-title">
@@ -421,7 +430,7 @@
       <!-- Customer section ends -->
 
       <!-- Blog section starts -->
-      <section class="blog section-container">
+      <section id="blog" class="blog section section-container">
         <h1 class="section-heading">Blog</h1>
 
         <div class="blog-section-1">
@@ -480,7 +489,7 @@
       <!-- Blog section ends -->
 
       <!-- Contact section starts -->
-      <section class="contact section-container">
+      <section id="contact" class="contact section section-container">
         <h1 class="section-heading">Liên lạc</h1>
         <div class="row">
           <div class="section-img col col-lg-6 col-md-6 col-sm-12">
@@ -504,7 +513,7 @@
                 <span />
               </div>
 
-              <button type="submit" class="button">Send</button>
+              <button type="submit" class="button">Gửi</button>
             </form>
           </div>
         </div>
@@ -525,7 +534,7 @@
     </nav>
     <!-- Header bottom ends -->
 
-    <footer>
+    <footer class="section">
       <div class="section-container">
         <div class="row">
           <div class="col col-lg-6 col-md-6 col-sm-12">
