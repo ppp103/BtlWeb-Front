@@ -5,7 +5,7 @@ const header = document.querySelector('.header-2');
 const header1 = document.querySelector('.header-1')
 const body = document.querySelector('body');
 const sections = document.querySelectorAll('.section');
-
+const glitchFix = document.querySelector('.glitch-fix');
 const headerHeight = header1.offsetHeight
 // Click vào thanh tìm kiếm -> border đen
 window.addEventListener("click", function (e) {
@@ -13,6 +13,10 @@ window.addEventListener("click", function (e) {
     searchBar.classList.add("active");
   } else {
     searchBar.classList.remove("active");
+  }
+
+  if(e.target.id !== "search-btn" && searchBar.classList.contains("clicked")){
+    searchBar.classList.remove("clicked");
   }
 });
 
@@ -24,10 +28,10 @@ searchBtn.addEventListener("click", function (e) {
 window.addEventListener('scroll', function(e){
   if(this.scrollY > headerHeight){
     header.classList.add('sticky');
-    body.style.paddingTop = `50px`;
+    glitchFix.style.paddingTop = `50px`;
   }else{
     header.classList.remove('sticky')
-    body.style.paddingTop = '0px';
+    glitchFix.style.paddingTop = '0px';
   }
 })
 
