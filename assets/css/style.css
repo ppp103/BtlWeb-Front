@@ -196,6 +196,23 @@ header .fa-book {
   color: var(--dark-green);
 }
 
+.header-1 .icons a:nth-child(4),
+.header-1 .icons a:nth-child(5){
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-1 .icons a:nth-child(4)::after{
+  content: '';
+  position: absolute;
+  height: 80%;
+  top: 0.1rem;
+  right: -1rem;
+  width: .1rem;
+  background-color: #000;
+  pointer-events: none;
+}
 .header-1 .icons #search-btn {
   display: none;
 }
