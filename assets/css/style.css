@@ -252,7 +252,7 @@ header .fa-book {
 
 /*---------------------------- Home section starts -------------------*/
 .home {
-  background-image: url(/assets/images/banner-bg.jpg);
+  background-image: url(assets/images/banner-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -701,6 +701,16 @@ footer .footer-note {
 
 
 /*------------------------ Responsive -----------------------------------*/
+@media (min-width: 1600px){
+  .customer{
+    height: 55%;
+  }
+
+  .customer-box .customer-slider{
+    padding-bottom: 5rem;
+  }
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
